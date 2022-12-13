@@ -5,15 +5,15 @@ import lombok.Data;
 @Data
 public class EstateAgentCreateRequest {
 	
-	private String name;
+	private String Name;
 	
-	private Long officerId;
+	private Long OfficerId;
 	
-	private String adress;
+	private String Adress;
 	
-	private String phone;
+	private String Phone;
 	
-	private String fax ;
+	private String Fax;
 	
 	
 }

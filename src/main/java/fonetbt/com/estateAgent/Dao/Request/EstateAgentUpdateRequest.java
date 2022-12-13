@@ -4,15 +4,13 @@ import lombok.Data;
 
 @Data
 public class EstateAgentUpdateRequest {
-
-	private int id;
 	
-	private String name;
+	private String Name;
 	
-	private String adress;
+	private String Adress;
 	
-	private String phone;
+	private String Phone;
 	
-	private String fax;
+	private String Fax;
 	
 }
