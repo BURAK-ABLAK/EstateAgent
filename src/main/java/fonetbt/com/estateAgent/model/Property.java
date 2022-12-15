@@ -2,15 +2,13 @@ package fonetbt.com.estateAgent.model;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import lombok.Data;
 
 @Data
@@ -24,22 +22,25 @@ public class Property {
 	private Long id;
 
 	@Column(name = "adress")
-	private String adress;
+	private String Adress;
 
 	@Column(name = "Room_Count")
-	private int roomCount;
+	private int RoomCount;
 
 	@Column(name = "Size")
-	private String size;
+	private String Size;
 
 	@Column(name = "Floor_Count")
-	private String floorCount;
+	private String FloorCount;
 
 	@Column(name = "isActive")
 	private boolean isActive;
 
 	@Column(name = "isDeleted")
 	private boolean isDeleted;
+	
+	@Column(name = "isPublished")
+	private boolean isPublished;
 
 	@Column(name = "CreatedDate")
 	private Date CreatedDate;
@@ -47,24 +48,14 @@ public class Property {
 	@Column(name = "UpdatedDate")
 	private Date UpdatedDate;
 
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "property_type_id", referencedColumnName = "id")
-	private PropertyType propertyType;
+	private long propertyTypeId;
+	
+	private long heatingsystemtypeId;
 
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "heating_system_type_id", referencedColumnName = "id")
-	private HeatingSystemType heatingsystemtype;
+	private long ownerId;
 
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "owner_id", referencedColumnName = "id")
-	private Customer ownerid;
+	private long propertystatusId;
 
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "property_status_id", referencedColumnName = "id")
-	private PropertyStatus propertystatus;
-
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "estateAgent_id", referencedColumnName = "id")
-	private EstateAgent estateagentid;
-
+	private long estateagentId;
+		
 }

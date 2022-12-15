@@ -1,32 +1,26 @@
 package fonetbt.com.estateAgent.Dao.Request;
 
-import fonetbt.com.estateAgent.model.Customer;
-import fonetbt.com.estateAgent.model.EstateAgent;
-import fonetbt.com.estateAgent.model.HeatingSystemType;
-import fonetbt.com.estateAgent.model.PropertyStatus;
-import fonetbt.com.estateAgent.model.PropertyType;
 import lombok.Data;
 
 @Data
 public class PropertyCreateRequest {
 	
 
-	private String adress;
+	public String Adress;
 
-	private int roomCount;
+	public int RoomCount;
 
-	private String size;
+	public String Size;
 
-	private String floorCount;
+	public String FloorCount;
 
-	private PropertyType propertyType;
+	public long PropertyType;
 
-	private HeatingSystemType heatingsystemtype;
+	public long HeatingSystemType;
 
-	private Customer ownerid;
+	public long OwnerId;
 
-	private PropertyStatus propertystatus;
+	public long PropertyStatus;
 
-	private EstateAgent estateagentid;
-
+	public long EstateagentId;
 }

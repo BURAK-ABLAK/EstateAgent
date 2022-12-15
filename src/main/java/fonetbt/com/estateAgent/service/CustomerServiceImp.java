@@ -34,9 +34,6 @@ public class CustomerServiceImp implements CustomerService {
 		customer.setAdress(request.getAdress());
 		customer.setPhone(request.getPhone());
 		customer.setEmail(request.getEmail());
-
-		// TODO officer_id added.
-
 		customer.setActive(true);
 		customer.setCreatedDate(Calendar.getInstance().getTime());
 
@@ -72,7 +69,6 @@ public class CustomerServiceImp implements CustomerService {
 		existingCustomer.setAdress(request.getAdress());
 		existingCustomer.setPhone(request.getPhone());
 		existingCustomer.setEmail(request.getEmail());
-
 		existingCustomer.setActive(true);
 		existingCustomer.setUpdatedDate(Calendar.getInstance().getTime());
 

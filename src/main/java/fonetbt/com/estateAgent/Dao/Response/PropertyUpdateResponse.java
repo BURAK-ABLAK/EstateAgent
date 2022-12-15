@@ -1,30 +1,15 @@
 package fonetbt.com.estateAgent.Dao.Response;
 
-import fonetbt.com.estateAgent.model.Customer;
-import fonetbt.com.estateAgent.model.EstateAgent;
-import fonetbt.com.estateAgent.model.HeatingSystemType;
-import fonetbt.com.estateAgent.model.PropertyStatus;
-import fonetbt.com.estateAgent.model.PropertyType;
-
 public class PropertyUpdateResponse {
 
-	public long id;
+	public long Id;
 
-	public String adress;
+	public String Adress;
 
-	public int roomCount;
+	public int RoomCount;
 
-	public String size;
+	public String Size;
 
-	public String floorCount;
+	public String FloorCount;
 
-	public PropertyType propertyType;
-
-	public HeatingSystemType heatingsystemtype;
-
-	public Customer ownerid;
-
-	public PropertyStatus propertystatus;
-
-	public EstateAgent estateagentid;
 }

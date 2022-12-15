@@ -33,14 +33,12 @@ public class EstateAgentController {
 
 	// build create
 	@PostMapping
-//	@ApiOperation(value = "create")
 	public ResponseEntity<EstateAgentCreateResponse> Create(@RequestBody EstateAgentCreateRequest request) {
 		return new ResponseEntity<EstateAgentCreateResponse>(estateAgentService.Create(request), HttpStatus.CREATED);
 	}
 
 	// build get all
 	@GetMapping
-//	@ApiOperation(value = "get")
 	public List<EstateAgent> getAllEstateAgents() {
 		return estateAgentService.getAllEstateAgents();
 	}
@@ -48,7 +46,6 @@ public class EstateAgentController {
 	// build get by id
 	// http://localhost:8080/api/estateagents/1-2-3-...etc
 	@GetMapping("{id}")
-//	@ApiOperation(value = "getbyid")
 	public ResponseEntity<EstateAgent> getEstateAgentById(@PathVariable("id") long estateAgentId) {
 		return new ResponseEntity<EstateAgent>(estateAgentService.getEstateAgentById(estateAgentId), HttpStatus.OK);
 	}
@@ -56,7 +53,6 @@ public class EstateAgentController {
 	// build update
 	// http://localhost:8080/api/estateagents/1-2-3-...etc
 	@PutMapping("{id}")
-//	@ApiOperation(value = "update")
 	public ResponseEntity<EstateAgentUpdateResponse> updateEstateAgent(@PathVariable("id") long id,
 			@RequestBody EstateAgentUpdateRequest request) {
 		return new ResponseEntity<EstateAgentUpdateResponse>(estateAgentService.updateEstateAgent(id, request),
@@ -66,7 +62,6 @@ public class EstateAgentController {
 	// build delete
 	// http://localhost:8080/api/estateagents/1-2-3-...etc
 	@DeleteMapping("{id}")
-//	@ApiOperation(value = "delete")
 	public ResponseEntity<String> deleteEstateAgent(@PathVariable("id") long id) {
 		estateAgentService.deleteEstateAgent(id);
 

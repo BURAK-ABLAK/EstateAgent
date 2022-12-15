@@ -34,7 +34,7 @@ public class EstateAgentServiceImp implements EstateAgentService {
 		estateAgent.setAdress(request.getAdress());
 		estateAgent.setPhone(request.getPhone());
 		estateAgent.setFax(request.getFax());
-//		estateAgent.setOfficerId(request.getOfficerId());
+		estateAgent.setOfficerId(request.getOfficerId());
 		estateAgent.setActive(true);
 		estateAgent.setCreatedDate(Calendar.getInstance().getTime());
 
