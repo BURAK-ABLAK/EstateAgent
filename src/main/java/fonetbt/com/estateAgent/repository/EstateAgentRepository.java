@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import fonetbt.com.estateAgent.model.EstateAgent;
 
 @Repository
-public interface EstateAgentRepository extends JpaRepository<EstateAgent,Long> {
-	
+public interface EstateAgentRepository extends JpaRepository<EstateAgent, Long> {
+
 }

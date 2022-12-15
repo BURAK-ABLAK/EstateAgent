@@ -8,5 +8,4 @@ import fonetbt.com.estateAgent.model.Customer;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-
 }

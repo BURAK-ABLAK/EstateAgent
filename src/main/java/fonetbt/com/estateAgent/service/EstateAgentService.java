@@ -9,9 +9,14 @@ import fonetbt.com.estateAgent.Dao.Response.EstateAgentUpdateResponse;
 import fonetbt.com.estateAgent.model.EstateAgent;
 
 public interface EstateAgentService {
+
 	EstateAgentCreateResponse Create(EstateAgentCreateRequest request);
+
 	List<EstateAgent> getAllEstateAgents();
+
 	EstateAgent getEstateAgentById(long id);
+
 	EstateAgentUpdateResponse updateEstateAgent(long id, EstateAgentUpdateRequest request);
+
 	void deleteEstateAgent(long id);
 }

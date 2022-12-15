@@ -25,45 +25,52 @@ import fonetbt.com.estateAgent.service.EstateAgentService;
 public class EstateAgentController {
 
 	private EstateAgentService estateAgentService;
-	
+
 	public EstateAgentController(EstateAgentService estateAgentService) {
 		super();
 		this.estateAgentService = estateAgentService;
 	}
-	
-	//build create
+
+	// build create
 	@PostMapping
-	public ResponseEntity<EstateAgentCreateResponse> Create(@RequestBody EstateAgentCreateRequest request){
-		return new ResponseEntity<EstateAgentCreateResponse>(estateAgentService.Create(request),HttpStatus.CREATED);
+//	@ApiOperation(value = "create")
+	public ResponseEntity<EstateAgentCreateResponse> Create(@RequestBody EstateAgentCreateRequest request) {
+		return new ResponseEntity<EstateAgentCreateResponse>(estateAgentService.Create(request), HttpStatus.CREATED);
 	}
-	
-	//build get all
+
+	// build get all
 	@GetMapping
-	public List<EstateAgent> getAllEstateAgents(){
+//	@ApiOperation(value = "get")
+	public List<EstateAgent> getAllEstateAgents() {
 		return estateAgentService.getAllEstateAgents();
 	}
-	
-	//build get by id
-	//http://localhost:8080/api/estateagents/1-2-3-...etc
+
+	// build get by id
+	// http://localhost:8080/api/estateagents/1-2-3-...etc
 	@GetMapping("{id}")
-	public ResponseEntity<EstateAgent> getEstateAgentById(@PathVariable("id") long estateAgentId){
+//	@ApiOperation(value = "getbyid")
+	public ResponseEntity<EstateAgent> getEstateAgentById(@PathVariable("id") long estateAgentId) {
 		return new ResponseEntity<EstateAgent>(estateAgentService.getEstateAgentById(estateAgentId), HttpStatus.OK);
 	}
-	
-	//build update
-	//http://localhost:8080/api/estateagents/1-2-3-...etc
+
+	// build update
+	// http://localhost:8080/api/estateagents/1-2-3-...etc
 	@PutMapping("{id}")
-	public ResponseEntity<EstateAgentUpdateResponse> updateEstateAgent(@PathVariable("id") long id , @RequestBody EstateAgentUpdateRequest request){
-		return new ResponseEntity<EstateAgentUpdateResponse>(estateAgentService.updateEstateAgent(id,request),HttpStatus.OK);
+//	@ApiOperation(value = "update")
+	public ResponseEntity<EstateAgentUpdateResponse> updateEstateAgent(@PathVariable("id") long id,
+			@RequestBody EstateAgentUpdateRequest request) {
+		return new ResponseEntity<EstateAgentUpdateResponse>(estateAgentService.updateEstateAgent(id, request),
+				HttpStatus.OK);
 	}
-	
-	//build delete
-	//http://localhost:8080/api/estateagents/1-2-3-...etc
+
+	// build delete
+	// http://localhost:8080/api/estateagents/1-2-3-...etc
 	@DeleteMapping("{id}")
-	public ResponseEntity<String> deleteEstateAgent(@PathVariable("id") long id){
+//	@ApiOperation(value = "delete")
+	public ResponseEntity<String> deleteEstateAgent(@PathVariable("id") long id) {
 		estateAgentService.deleteEstateAgent(id);
-		
+
 		return new ResponseEntity<String>("EstateAgent deleted success!", HttpStatus.OK);
 	}
-	
+
 }
